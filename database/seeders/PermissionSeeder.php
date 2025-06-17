@@ -22,7 +22,7 @@ class PermissionSeeder extends Seeder
         }
 
         // Assign all permissions to Admin role
-        $adminRole = Role::firstOrCreate(['name' => 'Admin']);
+            $adminRole = Role::firstOrCreate(['name' => 'Admin']);
         $adminRole->syncPermissions(Permission::all());
 
         // Example: Assign only sale permissions to Sales role
